@@ -82,42 +82,30 @@ public class PlayerState : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(interacting) {
+            ChangeAnim(12, 32);
+            return;
+        }
         if (running) {
             speed = 20;
+            ChangeAnim(11, 31);
         } else if(ducking){
             speed = 6;
             if (!moving) {
-                if(direction == 0) {
-                    animator.SetInteger("AnimState", 42);
-                } else {
-                    animator.SetInteger("AnimState", 22);
-                }
+                ChangeAnim(42, 22);
             } else {
-                if (direction == 0) {
-                    animator.SetInteger("AnimState", 41);
-                } else {
-                    animator.SetInteger("AnimState", 21);
-                }
+                ChangeAnim(41, 21);
             }
         } else if (moving && !interacting){
             speed = 10;
-            if (direction == 0) {
-                animator.SetInteger("AnimState", 11);
-            } else {
-                animator.SetInteger("AnimState", 31);
-            }
+            ChangeAnim(11, 31);
         } else if(!moving && !interacting) {
-            if (direction == 0) {
-                animator.SetInteger("AnimState", 12);
-            } else {
-                animator.SetInteger("AnimState", 32);
-            }
+            ChangeAnim(12,32);
         }
-        Debug.Log(direction);
     }
 
     public bool Interact() {
-        if (!moving && !ducking) {
+        if (!ducking) {
             canMove = false;
             interacting = true;
             StartCoroutine(Searching());
@@ -130,5 +118,13 @@ public class PlayerState : MonoBehaviour
         yield return new WaitForSeconds(3);
         canMove = true;
         interacting = false;
+    }
+
+    public void ChangeAnim(int izq, int der) {
+        if (direction == 0) {
+            animator.SetInteger("AnimState", izq);
+        } else {
+            animator.SetInteger("AnimState", der);
+        }
     }
 }

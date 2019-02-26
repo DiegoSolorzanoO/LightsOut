@@ -24,7 +24,6 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void AddItem(string name) {
@@ -61,27 +60,10 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
-    private void OnTriggerStay2D(Collider2D collision) {
-        if (Input.GetKeyDown(KeyCode.E)) {
-            if (collision.gameObject.tag == "Item") {
-                AddItem(collision.gameObject.name);
-                Destroy(collision.gameObject);
-            }
-            if (collision.gameObject.tag == "Interactable") {
-                Interactable sc = collision.gameObject.GetComponent<Interactable>();
-                if(ps.Interact()) {
-                    AddItem(sc.GetItem());
-                    sc.CanInteract(false);
-                }
-            }
-        }
-    }
-
     private void OnGUI() {
-        for(int i = 0; i < inv.Count; i++) {
-            GUI.TextField(new Rect(100 + i * 50, 30, 50, 50), "", invStyle);
-            GUI.DrawTexture(new Rect(100+ i * 50, 30, 50, 50), inv[i].icon);
-            
+        GUI.Label(new Rect(Screen.width * 0.05f, Screen.height * 0.05f, Screen.width * 0.06f * 5, Screen.height * 0.10f), "", invStyle);
+        for (int i = 0; i < inv.Count; i++) { 
+            GUI.DrawTexture(new Rect(Screen.width*0.05f  + i * Screen.width * 0.06f, Screen.height * 0.05f, Screen.width * 0.06f, Screen.height * 0.10f), inv[i].icon);
         }
     }
 }
