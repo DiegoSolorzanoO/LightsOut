@@ -18,11 +18,13 @@ public class PlayerMove : MonoBehaviour
         if(Input.GetKey(KeyCode.A) && ps.CanMove()) {
             transform.Translate(-5*ps.GetSpeed()*Time.deltaTime,0,0);
             ps.Moving(true);
+            ps.direction = 0;
             return;
         }
         if (Input.GetKey(KeyCode.D) && ps.CanMove()) {
             transform.Translate(5 * ps.GetSpeed() * Time.deltaTime, 0, 0);
             ps.Moving(true);
+            ps.direction = 1;
             return;
         }
         ps.Moving(false);

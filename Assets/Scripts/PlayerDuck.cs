@@ -20,7 +20,7 @@ public class PlayerDuck : MonoBehaviour
         if(Input.GetKey(KeyCode.S) && !ps.Running() && ps.CanMove()) {
             cc.direction = CapsuleDirection2D.Horizontal;
             cc.size = new Vector2(43,10);
-            cc.offset = new Vector2(0, 5);
+            cc.offset = new Vector2(0, 6);
             ps.Ducking(true);
         } else {
             cc.direction = CapsuleDirection2D.Vertical;

@@ -10,6 +10,7 @@ public class PlayerState : MonoBehaviour
     public bool ducking;
     public bool canMove;
     public bool interacting;
+    public int direction;
 
     protected Rigidbody2D rb;
 
@@ -86,15 +87,48 @@ public class PlayerState : MonoBehaviour
         } else if(ducking){
             speed = 6;
             if (!moving) {
-                animator.SetInteger("AnimState", 22);
+                if(direction == 0) {
+                    animator.SetInteger("AnimState", 42);
+                } else {
+                    animator.SetInteger("AnimState", 22);
+                }
             } else {
-                animator.SetInteger("AnimState", 221);
+                if (direction == 0) {
+                    animator.SetInteger("AnimState", 41);
+                } else {
+                    animator.SetInteger("AnimState", 21);
+                }
             }
         } else if (moving && !interacting){
             speed = 10;
-            animator.SetInteger("AnimState", 11);
+            if (direction == 0) {
+                animator.SetInteger("AnimState", 11);
+            } else {
+                animator.SetInteger("AnimState", 31);
+            }
         } else if(!moving && !interacting) {
-            animator.SetInteger("AnimState", 0);
+            if (direction == 0) {
+                animator.SetInteger("AnimState", 12);
+            } else {
+                animator.SetInteger("AnimState", 32);
+            }
         }
+        Debug.Log(direction);
+    }
+
+    public bool Interact() {
+        if (!moving && !ducking) {
+            canMove = false;
+            interacting = true;
+            StartCoroutine(Searching());
+            return true;
+        }
+        return false;
+    }
+
+    IEnumerator Searching() {
+        yield return new WaitForSeconds(3);
+        canMove = true;
+        interacting = false;
     }
 }

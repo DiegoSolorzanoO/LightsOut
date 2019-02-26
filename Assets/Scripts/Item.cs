@@ -9,6 +9,7 @@ public class Item
     public string iName;
     public string iDescription;
     public IType iType;
+    public Texture2D icon;
     
     public enum IType {
         Weapon,

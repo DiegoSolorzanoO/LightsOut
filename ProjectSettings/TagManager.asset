@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Item
   - ItemDatabase
+  - Interactable
   layers:
   - Default
   - TransparentFX
