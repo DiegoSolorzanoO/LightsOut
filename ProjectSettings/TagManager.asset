@@ -7,6 +7,10 @@ TagManager:
   - Item
   - ItemDatabase
   - Interactable
+  - GameManager
+  - Door
+  - BackDoor
+  - EventTrigger
   layers:
   - Default
   - TransparentFX
@@ -16,7 +20,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - IgnoreRay
   - 
   - 
   - 

@@ -1,0 +1,28 @@
+{
+	"dialogues": [
+		{
+			"characterType": 0,
+			"name": "Player",
+			"image": "player_normal",
+			"dialogueText": "Oh no no no no"
+		},
+		{
+			"characterType": 0,
+			"name": "Player",
+			"image": "player_normal",
+			"dialogueText": "ETHAN!? ETHAN!!!"
+		},
+		{
+			"characterType": 0,
+			"name": "Player",
+			"image": "player_normal",
+			"dialogueText": "Fuck man..."
+		},
+		{
+			"characterType": 0,
+			"name": "Player",
+			"image": "player_normal",
+			"dialogueText": "I need to get out of here and look for help"
+		}
+	]
+}

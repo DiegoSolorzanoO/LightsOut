@@ -1,0 +1,16 @@
+{
+	"dialogues": [
+		{
+			"characterType": 0,
+			"name": "Player",
+			"image": "player_normal",
+			"dialogueText": "Oh God that's a lot of blood!"
+		},
+		{
+			"characterType": 0,
+			"name": "Player",
+			"image": "player_normal",
+			"dialogueText": "What is going on here?"
+		}
+	]
+}

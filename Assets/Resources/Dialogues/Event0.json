@@ -1,0 +1,34 @@
+{
+	"dialogues": [
+		{
+			"characterType": 0,
+			"name": "Player",
+			"image": "player_normal",
+			"dialogueText": "Well... It seems that the whole city is in complete darkness..."
+		},
+		{
+			"characterType": 0,
+			"name": "Player",
+			"image": "player_normal",
+			"dialogueText": "And this total silence makes no sense!"
+		},
+		{
+			"characterType": 0,
+			"name": "Player",
+			"image": "player_normal",
+			"dialogueText": "*Looks again at the window*"
+		},
+		{
+			"characterType": 0,
+			"name": "Player",
+			"image": "player_normal",
+			"dialogueText": "Not a single scream or siren god dammit..."
+		},
+		{
+			"characterType": 0,
+			"name": "Player",
+			"image": "player_normal",
+			"dialogueText": "Better go check with Ethan to see what's going on"
+		}
+	]
+}

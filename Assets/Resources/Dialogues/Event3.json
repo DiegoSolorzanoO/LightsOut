@@ -1,0 +1,34 @@
+{
+	"dialogues": [
+		{
+			"characterType": 0,
+			"name": "Player",
+			"image": "player_normal",
+			"dialogueText": "Oh shit!"
+		},
+		{
+			"characterType": 0,
+			"name": "Player",
+			"image": "player_normal",
+			"dialogueText": "He's definitely dead..."
+		},
+		{
+			"characterType": 0,
+			"name": "Player",
+			"image": "player_normal",
+			"dialogueText": "*Searches the body*"
+		},
+		{
+			"characterType": 0,
+			"name": "Player",
+			"image": "player_normal",
+			"dialogueText": "Robert... 25 years old..."
+		},
+		{
+			"characterType": 0,
+			"name": "Player",
+			"image": "player_normal",
+			"dialogueText": "I think he was the new neighbor... yeah, there's the key"
+		}
+	]
+}
